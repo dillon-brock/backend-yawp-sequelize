@@ -104,4 +104,10 @@ describe('movie routes', () => {
     expect(res.body.length).toBe(5);
   });
 
+  it('GET /genres should return list of genres with', async () => {
+    const res = await request(app).get('/api/v1/genres');
+    expect(res.status).toBe(200);
+    expect(res.body.length).toBe(5);
+  });
+
 });
